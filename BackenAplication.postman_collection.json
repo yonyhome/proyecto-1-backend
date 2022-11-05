@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "1a56a216-d9c3-4edf-ba66-05263d21fe5e",
+		"name": "BackenAplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22432922"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"amaranto perea\",\r\n    \"email\": \"amaranto@mail.com\",\r\n    \"password\": \"clave123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/users/63651c12f5178bcd6a29ad3b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users",
+						"63651c12f5178bcd6a29ad3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"danilo Hoyos\",\r\n    \"email\": \"dani@mail.com\",\r\n    \"password\": \"clave123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/users/63651c12f5178bcd6a29ad3b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users",
+						"63651c12f5178bcd6a29ad3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/users/63651bebf5178bcd6a29ad37",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users",
+						"63651bebf5178bcd6a29ad37"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create followed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"follower\" : \"63651c04f5178bcd6a29ad39\",\r\n    \"followed\": \"6365a935103ecbcc03ed4084\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/followers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"followers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Followers list base on user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/followers/63651c04f5178bcd6a29ad39",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"followers",
+						"63651c04f5178bcd6a29ad39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete one relation into follower and followed",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/followers/6365b21044800ff715da2e5f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"followers",
+						"6365b21044800ff715da2e5f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create publication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Salida de campo\",\r\n    \"content\":\"El grupo de geologia de la universidad del Norte ira a una visita de campo en la ciudad de santamarta\",\r\n    \"author\":\"63651c04f5178bcd6a29ad39\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/publications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"publications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Timeline of followeds publicatios base on user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/publications/timeline/63651c04f5178bcd6a29ad39",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"publications",
+						"timeline",
+						"63651c04f5178bcd6a29ad39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set like to publication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"publication\": \"6365b68e44800ff715da2e66\",\r\n    \"user\": \"63655cf5a2e2b093ecfe7fe0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/likes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"likes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of  user like publications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/publications/likes/63655cf5a2e2b093ecfe7fe0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"publications",
+						"likes",
+						"63655cf5a2e2b093ecfe7fe0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete like by register like id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
